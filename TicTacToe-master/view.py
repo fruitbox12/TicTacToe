@@ -13,28 +13,42 @@ class View:
             print('Menu')
             print('1. Player vs. Player Game')
             print('2. New Player vs. AI Game')
-            print('3. Exit')
+            print('3. AI Player vs. AI Player Game')
+            print('4. Exit')
 
             menu_option = int(input('Please select an option: '))
 
-            if menu_option not in range(1, 4):
+            if menu_option not in range(1, 5):
                 print('Please select a valid option')
-            elif menu_option == 2:
-                print('Soorey the ai broke')
             else:
                 valid = True
 
         return menu_option
 
-    def get_player_names(self):
+    def get_player_names(self, game_type):
         player_name_list = []
-        player = 0
-        samename = False
-        for self.__min_players in range(self.__max_players):
-                player += 1
-                name = str(input("Please enter your name Player " + str(player) + ". Press Enter to confirm "))
-                player_name_list.append(name)
-                print("Your name is: " + name)
+        if game_type == 1:
+            for number in range(self.__max_players): 
+                name = str(input("Please enter your name. Press Enter to confirm "))
+                if len(name) > 0:
+                    player_name_list.append(name)
+                    print("Your name is: " + name)
+
+                elif len(player_name_list) < self.__min_players:
+                    print("You need at least " + str(self.__min_players) + " players to play!")
+                else:
+                    break
+        if game_type == 2:
+            for player in range(self.__min_players, self.__min_players + 1): 
+                name = str(input("Please enter your name Player. Press Enter to confirm "))
+                if len(name) > 0:
+                    player_name_list.append(name)
+                    print("Your name is: " + name)
+
+                elif len(player_name_list) < self.__min_players:
+                    print("You need at least " + str(self.__min_players) + " players to play!")
+                else:
+                    break
 
         return player_name_list
 

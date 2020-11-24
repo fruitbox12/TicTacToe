@@ -1,6 +1,10 @@
-import Src.player
+import player
 
 
-class HumanPlayer(Src.player.Player):
-    def __init__(self, number, name):
-        Src.player.Player.__init__(self, number, name)
+class HumanPlayer(player.Player):
+    def __init__(self, type, number, name, board):
+        player.Player.__init__(self, type, number, name, board)
+
+    # Override abstract method
+    def play(self, row, col):
+        player.Player.move(row, col)

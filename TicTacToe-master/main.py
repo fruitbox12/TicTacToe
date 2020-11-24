@@ -1,11 +1,11 @@
-import Src.controller
+import controller
 
 
 """"Main is a funciton"""
 
 
 def main():
-    controller = Src.controller.Controller()
+    ctrl = controller.Controller()
 
 
 main()
