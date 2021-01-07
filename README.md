@@ -2,7 +2,7 @@
 Console TicTacToe App
 
 AI player class holds strategies, referencing the different methods of winning in a nested loop with certain conditions
-`     4 
+`    1 4 
         2 = 16 combinations (4 possible squares taken two sides at a time)
          1 | 2 | 3      1 2     2 3     8 combinations
 	     ---------	    4 5     5 6
