@@ -1,7 +1,6 @@
-FROM alpine:3.1
-RUN apk add --update make cmake gcc g++ gfortran
-RUN apk add --update python py-pip python-dev
-RUN pip install cython
-RUN pip install numpy
+FROM python:3.8-alpine
+COPY ./. .
 
+RUN apk add --update --no-cache py3-numpy
+ENV PYTHONPATH=/usr/lib/python3.8/site-packages
 CMD python main.py
