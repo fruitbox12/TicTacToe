@@ -12,4 +12,4 @@ Python 3
 
 
 Docker:
-Type `docker run -it rm tictactoe:latest`
+Type ` docker run -it --rm tictactoemaster:latest`
