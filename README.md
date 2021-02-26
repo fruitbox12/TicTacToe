@@ -1,4 +1,4 @@
-# PyTacToe
+### PyTacToe
 Console TicTacToe App
 
 AI player class holds strategies, referencing the different methods/strategies of winning in a nested loop with certain conditions
